@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title> Snake AI v. 1.0 </title>
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="styles/main.css" />
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="styles/bootstrap/css/bootstrap.min.css" >
+
+		<link rel="stylesheet" href="styles/bootstrap/css/bootstrap-theme.min.css" >
+
+	
+<body style="background-color:rgba(156, 156, 156, 0.05);">
+	<div calss="row">
+	 
+		<!-- grid -->
+		<div class="col-md-6">
+			<div id="main">
+	    		<div id="search_grid">Loading grid...</div>
+	    	</div>
+
+		</div>
+
+
+		<!-- controll panel -->
+		<div class="col-md-3" style="background-color:rgba(156, 156, 156, 0.05);">
+			<div id="controls" class='clear'>
+					<h2>Snake Ai v. 1.0</h2>
+					 
+					<hr>
+
+					<p><b>Instruction</b></p>
+					<p>Put the Food any place on the grid then snake will be coming  using shortest path</p>
+					<hr>
+					<label for="selectWallFrequency">Wall Frequency: </label>
+		    		<select id="selectWallFrequency">
+		    			<option value=".1">10%</option>
+		    			<option value=".2">20%</option>
+		    			<option value=".3">30%</option>
+		    			 
+		    		</select>
+	    			<br/>
+	    			 
+	    				<label for="selectGridSize">Grid Size: </label>
+			    			<select id="selectGridSize" name="selectGridSize">
+			    				<option value="10">10x10</option>
+			    				<option value="15">15x15</option>
+			    				<option value="20">20x20</option>
+			    			 	<option value="30">30x30</option>  
+			    				<option value="40" selected="selected">40x40</option>
+			    				 
+			    			</select>
+			     
+
+					<br/>
+	    			<label for="searchDiagonal">Allow diagonal movement</label>
+	    			<input type="checkbox" name="searchDiagonal" id="searchDiagonal" />
+	    			<br/>
+	    			<hr>
+	    			<br/>
+	    			 	<div class="alert alert-success" style="width:180px; ">
+							<span id="message">Click on a grid position to search</span>
+						</div>
+				 		<button class="btn-warning" type="button"  id="btnGenerate">
+	    		 			Chanage Map
+	    		 		</button>
+	    		  
+	    		  </div>
+			</div>
+
+		</div>
+		 
+	</div>
+
+	 
+	<script type='text/javascript' src='js/jquery-1.7.1.min.js'></script>
+	<script type='text/javascript' src='js/astar.js'></script>
+	<script type='text/javascript' src='js/main.js'></script>
+</body>
+</html>
